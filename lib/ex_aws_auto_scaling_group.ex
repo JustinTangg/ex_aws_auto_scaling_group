@@ -1,4 +1,4 @@
-defmodule ExAwsAutoScalingGroup do
+defmodule ExAws.AutoScalingGroup do
   @moduledoc """
   Documentation for ExAwsAutoScalingGroup.
   """
@@ -39,7 +39,7 @@ defmodule ExAwsAutoScalingGroup do
               |> filter_nil_params
               |> Map.put("Action", action_string)
               |> Map.put("Version", @version),
-      service: :monitoring,
+      service: :autoscaling,
       action: action,
       parser: &ExAws.AutoScalingGroup.Parsers.parse/2
     }
