@@ -11,9 +11,6 @@ defmodule ExAwsAutoScalingGroup.Mixfile do
     ]
   end
 
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_),     do: ["lib",]
-
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
@@ -30,7 +27,7 @@ defmodule ExAwsAutoScalingGroup.Mixfile do
       {:sweet_xml, ">= 0.0.0", only: [:dev, :test]},
       {:poison, ">= 0.0.0", only: [:dev, :test]},
       {:ex_doc, "~> 0.16", only: [:dev, :test]},
-      {:ex_aws, "~> 2.0.0", only: [:dev, :test]}
+      {:ex_aws, "~> 2.0.0"}
     ]
   end
 end
